@@ -18,6 +18,8 @@
     <select id="operation">
         <option value="add">add</option>
         <option value="multiplication">multiplication</option>
+        <option value="subtraction">subtraction</option>
+        <option value="division">division</option>
     </select>
     <button onclick="calculate()">calculate</button>
     <div id="result">Result</div>
@@ -36,6 +38,10 @@
                     break;
                     case"multiplication":result=num1*num2;
                     break;   
+                    case"subtraction":result=num1-num2;
+                    break;
+                    case"division":result=num1/num2;
+                    break;
                 }
              
             }
