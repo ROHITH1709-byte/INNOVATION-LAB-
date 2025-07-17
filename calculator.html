@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            text-align: center;
+        }
+        input,select,button{
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>CALCULATOR PROGRAM</h2>
+    <input type="number"  placeholder="enter the  firstvalue" id="num1"><br>
+    <input type="number" placeholder="enter the secondvalue" id="num2"><br>
+    <select id="operation">
+        <option value="add">add</option>
+        <option value="multiplication">multiplication</option>
+    </select>
+    <button onclick="calculate()">calculate</button>
+    <div id="result">Result</div>
+    <script>
+        function calculate(){
+            let num1=parseInt(document.getElementById("num1").value);
+            let num2=parseInt(document.getElementById("num2").value);
+            const operation=document.getElementById("operation").value;
+            let result;
+            if(isNaN(num1)||isNaN(num2)){
+                result="check your entered input";
+            }
+            else{
+                switch(operation){
+                    case"add":result=num1+num2;
+                    break;
+                    case"multiplication":result=num1*num2;
+                    break;   
+                }
+             
+            }
+            document.getElementById("result").innerText=result;
+        }
+    </script>
+</body>
+</html>
