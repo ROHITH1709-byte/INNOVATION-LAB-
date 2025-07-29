@@ -1,6 +1,6 @@
 //let number=[1,2,"Three",True];
 
-// let names=new Array("john","james");
+ //let names=new Array("john","james");
 //console.log(number[2]);
 //console.log(names.length);
 //let result=number.filter(number => number[0]);
