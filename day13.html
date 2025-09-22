@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        try{
+        //     //code that may throw an error
+        }catch(error){
+        //     //code to handle the error
+        }finally{
+        //     //code that will always execute
+        }
+
+        try{
+            let atmpin=2345;
+            if(atmpin !== 1234){
+                throw"incorrect pin"
+            }
+            console.log("logged in")
+        }catch(error){
+            console.log("error"+error)
+        }finally{
+            console.log("executed successfully");
+        }
+
+        //json methods: parse() stringfy()
+        //parse()-converts string
+        //stringfy()-
+
+        let str='{"name";"santhosah"}';
+        console.log(str)
+        let strstred=json.parse(str);
+        console.log(strstred);
+
+        let obj={id:"1"};
+        let stredobj=JSON.stringify(obj);
+        console.log(stredobj)
+    fetch("data.json")
+    .then(res=>res.json)
+    .then(data=>{
+        for(let detail of person){
+            console.log(detail.person)
+        }
+    })
+    </script>
+</body>
+</html>
